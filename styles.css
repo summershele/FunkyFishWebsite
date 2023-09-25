@@ -51,11 +51,29 @@
        
      }
 
-     ul.test li{
-        display: inline-block;
-        padding: 5px;
-          text-align: left;
-          background: #4B2E83;
-          color: white;
-          font-size: 10px;
+     ul.test li {
+      /*Make the list a nav-bar style*/
+        
+      /*Set the size of each button*/
+      width: 14%;
+      height: 14%;
+    /*Set color and size*/
+      background-color:#4B2E83;
+      color: white;
+      font-size: 20px;
+
+    /*Move the text to the center of the 'button'*/ 
+      display: inline-flex;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+      user-select: none;
+      
+      list-style-type: none;
+     }
+     ul.test li:hover {
+      background-color:#6f4ab8;
+     }
+     a {
+      color: white;
      }
