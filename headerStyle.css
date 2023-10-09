@@ -1,0 +1,55 @@
+/*THIS STYLE SHEET IS DEDICATED TO ONLY HEADERS. PLEASE DO NOT INSERT FOR ANYTHING OTHER THAN THE HEADER AND NAVIGATION BAR OF A PAGE.*/
+
+.home-logo{
+    width: 100px;
+    height: auto;
+}
+
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    padding: 1em 2em; /* Give some padding to the header */
+    background: #4B2E83;
+    color: white;
+}
+
+.home-logo {
+    vertical-align: middle; /* Align the image with the text */
+    max-width: 50px; /* Or any appropriate size */
+    margin-right: 1em;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em; /* Add some space between the title and the navbar */
+}
+
+#navbar li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    font-size: 2vw;
+    padding: 1vw 0;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #5B3E93;
+}
+
+@media (max-width: 600px) {
+    #navbar li a {
+        font-size: 5vw;
+        padding: 3vw 0;
+    }
+}
