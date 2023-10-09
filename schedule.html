@@ -24,21 +24,19 @@
             </ul>
         </div>        
       
-      <!--navigation bar  end--> 
-      <!--Schedule Page Body Start-->
-      <div class=" schedule" style="position: relative; align-items: center; align-self: center;">
-        <iframe src="FunkyFishSchedule.pdf#toolbar=0" width="60%" height="80%" id="pdfIframe" onload="resizeIframe(this)"></iframe>
-        <a href="FunkyFishSchedule.pdf" download style="position: absolute; top: 0; left: 0; width: 60%; height: 80%; z-index: 2;"
-        
-        
-        <!--Script to make the Iframe the right size compared to the PDF-->
+        <!--navigation bar  end--> 
+        <!--Schedule Page Body Start-->
+        <div class=" schedule" style="position: relative; align-items: center; align-self: center;">
+            <iframe src="FunkyFishSchedule.pdf#toolbar=0" width="60%" height="80%" id="pdfIframe" onload="resizeIframe(this)"></iframe>
+            <a href="FunkyFishSchedule.pdf" download style="position: absolute; top: 0; left: 0; width: 60%; height: 80%; z-index: 2;"></a>
+        </div>
+
+        <!-- Script to make the Iframe the right size compared to the PDF-->
         <script>
             function resizeIframe(obj) {
                 // Adjust height based on the content of the iframe
                 obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
             }
         </script>
-
-      </div>
     </body>
 </html>
