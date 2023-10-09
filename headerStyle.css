@@ -11,14 +11,14 @@ body, html {
 }
 
 .header {
-    padding: 1em 2em; /* Give some padding to the header */
+    padding: 1em 2em;
     background: #4B2E83;
     color: white;
 }
 
 .home-logo {
-    vertical-align: middle; /* Align the image with the text */
-    max-width: 50px; /* Or any appropriate size */
+    vertical-align: middle;
+    max-width: 50px; 
     margin-right: 1em;
 }
 
@@ -27,7 +27,7 @@ body, html {
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
-    margin-top: 1em; /* Add some space between the title and the navbar */
+    margin-top: 1em;
 }
 
 #navbar li {
