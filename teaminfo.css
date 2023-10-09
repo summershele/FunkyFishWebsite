@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.colcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex-basis: 48%; /* Adjust the width of each column as needed */
+}
+
+/*  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+} */
