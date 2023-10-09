@@ -1,27 +1,42 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="scheduleStyle.css">
+        <link rel="stylesheet" type="text/css" href="headerStyle.css"
     </head>
     <body>
         <!--header -->
-      <div class="header">
-        <h1><a href="file:///D:/Github/FunkyFishWebsite/index.html"><img  src="funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> Funky Fish Swim Club
-        </h1>
-        
-        <ul class="test">
-            <div id="navbar" class="nav">
-                <li ><a href="index.html">Home</a></li>
+        <div class="header">
+            <h1>
+                <a href="file:///D:/Github/FunkyFishWebsite/index.html">
+                    <img src="funkyfishlogo.jpg" alt="Fish" class="home-logo">
+                </a> 
+                Funky Fish Swim Club
+            </h1>
+                
+            <ul id="navbar" class="nav">
+                <li><a href="home.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
                 <li><a href="teamInfo.html">Team Info</a></li>
                 <li><a href="pools.html">Pools</a></li>
                 <li><a href="joinFFSC.html">Join FFSC</a></li>
                 <li><a href="parents.html">Parents</a></li>
-            </div>
-        </ul>
-      </div>
+            </ul>
+        </div>        
       
-      <!--navigation bar --> 
-      
+        <!--navigation bar  end--> 
+        <!--Schedule Page Body Start-->
+        <div class=" schedule" style="position: relative; align-items: center; align-self: center;">
+            <iframe src="FunkyFishSchedule.pdf#toolbar=0" width="60%" height="80%" id="pdfIframe" onload="resizeIframe(this)"></iframe>
+            <a href="FunkyFishSchedule.pdf" download style="position: absolute; top: 0; left: 0; width: 60%; height: 80%; z-index: 2;"></a>
+        </div>
+
+        <!-- Script to make the Iframe the right size compared to the PDF-->
+        <script>
+            function resizeIframe(obj) {
+                // Adjust height based on the content of the iframe
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
     </body>
 </html>
