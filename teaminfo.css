@@ -15,9 +15,19 @@ body {
     flex-basis: 48%; /* Adjust the width of each column as needed */
 }
 
-/*  img {
-    width: 100%;
+ .bio {
+    border-style: inset;
+    border-width: 5px;
+    color:whitesmoke;
+    text-align:center;
+    background-color: #4B2E83;
+}
+
+
+
+ /* img {
+    width: 20%;
     height: auto;
     display: block;
     margin-bottom: 15px;
-} */
+}   */
