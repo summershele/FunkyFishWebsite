@@ -1,0 +1,19 @@
+   /* Style the body */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+/* Page Content */
+.content {
+  padding:5px;
+}
+
+body 
+{
+  background-color:rgb(182, 182, 182);
+}
+
+a {
+  color: white;
+}
