@@ -11,9 +11,13 @@ body {
 
 body 
 {
-  background-color:rgb(182, 182, 182);
+  background-color:rgb(242, 209, 255);
+}
+
+a1{
+  color: black;
 }
 
 a {
-  color: white;
+  color: black;
 }

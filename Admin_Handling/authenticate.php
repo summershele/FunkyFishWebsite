@@ -7,6 +7,7 @@ $user = "root";
 $pass = "";
 $dbname = "admintasks";
 
+//everytime we call this method it creates a new instance, 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 if ($conn->connect_error) {
