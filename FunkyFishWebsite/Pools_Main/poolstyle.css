@@ -6,9 +6,15 @@
     font-size: 30px;
 }
 
+.pools{
+    border:3px solid #835BD0;
+    background-color: #835BD0; 
+    font-size: large;
+}
+
 .container {
     border:3px solid #835BD0;
-    background-color: #4B2E83;
+    background-color: #fff;
     margin: auto;
     padding: 50px;
     text-align:center;
@@ -74,7 +80,9 @@
     width: 100%;
     height: 95%;
     align-items: center;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    column-gap: 50px;
+    row-gap: 50px;
 }
