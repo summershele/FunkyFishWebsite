@@ -59,3 +59,21 @@
     from {opacity: .4}
     to {opacity: 1}
   }
+
+  .colcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-style: inset;
+    border-width: 5px;
+    float: left;
+  
+    
+
+}
+
+.column {
+    flex-basis: 48%; /* Adjust the width of each column as needed */
+    border: rgb(14, 10, 10);
+    float: left;
+}
