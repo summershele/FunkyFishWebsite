@@ -32,6 +32,10 @@
             color:whitesmoke;
             text-align:center;
             background-color: #4B2E83;
+            width: 20%;
+            border-left-width: 50%;
+            align-items: center;
+            margin: auto;
         }
 
         .Title{
