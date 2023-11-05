@@ -28,7 +28,7 @@
 
 
 </body>
-  <!--Start Footer-->
+    <!--Start Footer-->
     <footer>
         <img src="../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
         <p><a href="Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
