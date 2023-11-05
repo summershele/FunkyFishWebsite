@@ -1,0 +1,59 @@
+/* Add this to your CSS file or within a <style> tag in the head of your HTML */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #717171; /* You can use any background color you want */
+    font-family: 'Arial', sans-serif; /* Optional: sets a font-family for the whole page */
+}
+
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* You can adjust the width as needed */
+    box-sizing: border-box; /* Makes sure padding doesn't affect the set width */
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #5C6BC0; /* Example button color, you can change this */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3F51B5; /* Darker shade for hover effect */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* If you want to make sure the footer stays at the bottom when the content is less but also moves down when the content is more */
+
+
+
+/* This ensures that the content of the body does not overlap with the footer */
