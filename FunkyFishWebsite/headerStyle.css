@@ -1,4 +1,7 @@
 /*THIS STYLE SHEET IS DEDICATED TO ONLY HEADERS. PLEASE DO NOT INSERT FOR ANYTHING OTHER THAN THE HEADER AND NAVIGATION BAR OF A PAGE.*/
+body {
+    padding-top: [HeaderHeight]px; /* Replace [HeaderHeight] with the actual height of your header */
+}
 
 .home-logo{
     width: 300px;
@@ -8,8 +11,12 @@
 body, html {
     margin: 0;
     font-family: Arial, sans-serif;
+
 }
 
+body{
+    padding-top: 1px; /* Adjust this value based on actual header height */
+}
 .header {
     padding: 1em 2em;
     background: #4B2E83;
