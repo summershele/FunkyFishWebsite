@@ -1,9 +1,9 @@
 /* Add this to your CSS file or within a <style> tag in the head of your HTML */
 .header {
     position: fixed; /* Fixed position */
-    top: 0;         /* Align to the top of the page */
-    width: 100%;    /* Ensure header extends full width */
-    z-index: 1000;  /* Ensure header is above other content */
+    top: 0;         
+    width: 100%;    
+    z-index: 1000;  
 }
 
 body, html {
@@ -12,8 +12,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #717171; /* You can use any background color you want */
-    font-family: 'Arial', sans-serif; /* Optional: sets a font-family for the whole page */
+    background: white; 
+    font-family: 'Arial', sans-serif; 
 }
 
 form {
@@ -57,10 +57,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-
-/* If you want to make sure the footer stays at the bottom when the content is less but also moves down when the content is more */
-
-
-
-/* This ensures that the content of the body does not overlap with the footer */

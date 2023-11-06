@@ -16,9 +16,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../headerStyle.css">
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
+    
     <title>Admin Dashboard</title>
 </head>
 <body>
+    
     <h1>Welcome to the Admin Dashboard</h1>
     <p>You are logged in!</p>
     <a href="logout.php">Logout</a>

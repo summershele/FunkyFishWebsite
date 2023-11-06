@@ -1,5 +1,3 @@
-
-
 .pools{
     border:3px solid #835BD0;
     background-color: #835BD0; 
@@ -21,25 +19,6 @@
     
 }
 
-.container2 {
-    border:3px solid #835BD0;
-    background-color: #4B2E83;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: whitesmoke;
-    width: 100%;
-    height: 40%;
-    align-items: center;
-}
-
-.card{
-    color:whitesmoke;
-    text-align:center;
-    background-color: #4B2E83;
-}
 
 .Title{
     text-align:center;

@@ -1,0 +1,62 @@
+/*THIS STYLE SHEET IS DEDICATED TO ONLY HEADERS. PLEASE DO NOT INSERT FOR ANYTHING OTHER THAN THE HEADER AND NAVIGATION BAR OF A PAGE.*/
+body {
+    padding-top: [HeaderHeight]px; /* Replace [HeaderHeight] with the actual height of your header */
+}
+
+.home-logo{
+    width: 300px;
+    height: auto;
+}
+
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+body{
+    padding-top: 1px; /* Adjust this value based on actual header height */
+}
+.header {
+    padding: 1em 2em;
+    background: #4B2E83;
+    color: white;
+}
+
+.home-logo {
+    vertical-align: middle;
+    max-width: 50px; 
+    margin-right: 1em;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+#navbar li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    font-size: 1.5vw;
+    padding: 1vw 0;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #5B3E93;
+}
+
+@media (max-width: 600px) {
+    #navbar li a {
+        font-size: 5vw;
+        padding: 3vw 0;
+    }
+}
