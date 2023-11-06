@@ -20,6 +20,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <title>Admin Dashboard</title>
 </head>
 <body>
+    
     <h1>Welcome to the Admin Dashboard</h1>
     <p>You are logged in!</p>
     <a href="logout.php">Logout</a>
