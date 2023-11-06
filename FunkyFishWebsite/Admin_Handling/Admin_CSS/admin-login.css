@@ -1,6 +1,6 @@
 /* Add this to your CSS file or within a <style> tag in the head of your HTML */
 .header {
-    position: fixed; 
+    position: fixed; /* Fixed position */
     top: 0;         
     width: 100%;    
     z-index: 1000;  

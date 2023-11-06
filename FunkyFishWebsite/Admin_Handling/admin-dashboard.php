@@ -14,18 +14,31 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
 </head>
 <body>
 
+<!--header -->
 <div class="header">
-    <h1>
-        <a href="../index.html">
-            <img src="../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
-        Administration Page
-    </h1>
-</div>
+          <h1>
+              <a href="../index.html">
+                  <img src="../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
+              Funky Fish Swim Club
+          </h1>
+              
+          <ul id="navbar" class="nav">
+              <li><a href="index.html"></a>Update Photos</li>
+              <li><a href="News_Main/news.html">Update News</a></li>
+              <li><a href="Schedule_Main/schedule.html">Update Schedule</a></li>
+              <li><a href="TeamInfo_Main/teamInfo.html">Update Team Info</a></li>
+              <li><a href="Pools_Main/pools.html">Update Pools</a></li>
+              <li><a href="JoinFFSC_Main/joinFFSC.html">View Registrations</a></li>
+              <li><a href="Parents_Main/parents.html">Update Parents</a></li>
+          </ul>
+      </div>        
+    
+      <!--end header--> 
 
     <h1>Welcome to the Admin Dashboard</h1>
     <p>You are logged in!</p>
