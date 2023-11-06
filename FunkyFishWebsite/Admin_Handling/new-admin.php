@@ -19,7 +19,7 @@ $newAdminPassword = "";
 $hashedPassword = password_hash($newAdminPassword, PASSWORD_DEFAULT);
 
 // Prepare and execute the SQL statement
-$sql = "INSERT INTO admin_users (username, password_hash) VALUES (?, ?)";
+$sql = "INSERT INTO admin_users (username, password) VALUES (?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('ss', $newAdminUsername, $hashedPassword);
 
