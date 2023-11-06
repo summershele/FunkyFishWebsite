@@ -12,7 +12,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #717171; /* You can use any background color you want */
+    background: white; /* You can use any background color you want */
     font-family: 'Arial', sans-serif; /* Optional: sets a font-family for the whole page */
 }
 
