@@ -28,8 +28,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           </h1>
               
           <ul id="navbar" class="nav">
-              <li><a href="index.html"></a>Update Photos</li>
-              <li><a href="News_Main/news.html">Update News</a></li>
+              <li><a href="Update_News/Update_News.html"></a>Update Photos</li>
+              <li><a href="Update_Parents/Update_Parents.html">Update News</a></li>
               <li><a href="Schedule_Main/schedule.html">Update Schedule</a></li>
               <li><a href="TeamInfo_Main/teamInfo.html">Update Team Info</a></li>
               <li><a href="Pools_Main/pools.html">Update Pools</a></li>
