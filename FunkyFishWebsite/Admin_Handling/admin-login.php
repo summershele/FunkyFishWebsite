@@ -26,7 +26,7 @@
     <input type="submit" value="Login">
 </form>
 
-
+<a href="new-admin.php"> make a new admin! </a>
 </body>
     <!--Start Footer-->
     <footer>
