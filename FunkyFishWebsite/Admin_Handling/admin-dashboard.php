@@ -33,7 +33,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               <li><a href="Schedule_Main/schedule.html">Update Schedule</a></li>
               <li><a href="TeamInfo_Main/teamInfo.html">Update Team Info</a></li>
               <li><a href="Pools_Main/pools.html">Update Pools</a></li>
-              <li><a href="JoinFFSC_Main/joinFFSC.html">View Registrations</a></li>
+              <li><a href="View_Registrations/View_Registrations.php">View Registrations</a></li>
               <li><a href="Parents_Main/parents.html">Update Parents</a></li>
           </ul>
       </div>        
