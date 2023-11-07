@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!--header -->
 <div class="header">
           <h1>
-              <a href="../index.html">
+              <a href="../../index.html">
                   <img src="../../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
               Funky Fish Swim Club
           </h1>
