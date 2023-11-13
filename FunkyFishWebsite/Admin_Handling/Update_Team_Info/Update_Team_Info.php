@@ -1,30 +1,12 @@
 <?php
-// session_start();
+session_start();
 
-// // Check if the user is logged in, if not redirect to login page
-// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-//     header("Location: admin-login.php");
-//     exit;
-// }
-
-<!-- Display Embedded PDFs -->
-$pdfFolder = 'path/to/pdf/folder/';
-$pdfs = glob($pdfFolder . '*.pdf');
-
-foreach ($pdfs as $pdf) {
-    echo '<embed src="' . $pdf . '" type="application/pdf" width="600" height="400">';
+// Check if the user is logged in, if not redirect to login page
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: admin-login.php");
+    exit;
 }
 
-if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
-    $pdfFolder = 'path/to/pdf/folder/';
-    $pdfName = $_FILES['pdfFile']['name'];
-    $pdfPath = $pdfFolder . $pdfName;
-
-    // Move the uploaded PDF to the designated folder
-    move_uploaded_file($_FILES['pdfFile']['tmp_name'], $pdfPath);
-
-    // Update database or any other relevant tracking logic
-}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +42,7 @@ if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
       <!--end header--> 
 
     <!-- Admin Page for Uploading/Updating PDFs -->
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="uploadInfo.php" method="post" enctype="multipart/form-data">
     <label for="pdfFile">Upload/Update PDF:</label>
     <input type="file" name="pdfFile" id="pdfFile">
     <input type="submit" value="Upload/Update">
