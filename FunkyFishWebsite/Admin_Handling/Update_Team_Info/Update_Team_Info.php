@@ -1,13 +1,13 @@
 <?php
-session_start();
+// session_start();
 
-// Check if the user is logged in, if not redirect to login page
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: admin-login.php");
-    exit;
-}
+// // Check if the user is logged in, if not redirect to login page
+// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+//     header("Location: admin-login.php");
+//     exit;
+// }
 
-<?php
+
 if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
     $pdfFolder = 'path/to/pdf/folder/';
     $pdfName = $_FILES['pdfFile']['name'];
@@ -26,8 +26,8 @@ if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="Admin_CSS/admin-header.css">
-    <link rel="stylesheet" type="text/css" href="../footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
+    <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
 </head>
 <body>
 
@@ -35,7 +35,7 @@ if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
 <div class="header">
           <h1>
               <a href="../index.html">
-                  <img src="../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
+                  <img src="../../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
               Funky Fish Swim Club
           </h1>
               
@@ -59,8 +59,8 @@ if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
 </body>
     <!--Start Footer-->
     <footer>
-        <img src="../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
-        <p><a href="Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
+        <img src="../../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
+        <p><a href="../Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
     </footer>
     <!--End Footer-->
 </html>
