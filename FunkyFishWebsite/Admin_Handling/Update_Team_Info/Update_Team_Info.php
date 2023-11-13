@@ -7,7 +7,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-<?php
+<!-- Display Embedded PDFs -->
+$pdfFolder = 'path/to/pdf/folder/';
+$pdfs = glob($pdfFolder . '*.pdf');
+
+foreach ($pdfs as $pdf) {
+    echo '<embed src="' . $pdf . '" type="application/pdf" width="600" height="400">';
+}
+
 if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
     $pdfFolder = 'path/to/pdf/folder/';
     $pdfName = $_FILES['pdfFile']['name'];
@@ -52,9 +59,12 @@ if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
     
       <!--end header--> 
 
-    <h1>Welcome to the Admin Dashboard</h1>
-    <p>You are logged in!</p>
-    <a href="logout.php">Logout</a>
+    <!-- Admin Page for Uploading/Updating PDFs -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="pdfFile">Upload/Update PDF:</label>
+    <input type="file" name="pdfFile" id="pdfFile">
+    <input type="submit" value="Upload/Update">
+</form>
 
 </body>
     <!--Start Footer-->
