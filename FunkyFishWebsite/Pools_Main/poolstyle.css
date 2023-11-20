@@ -1,9 +1,18 @@
 .pools{
     border:3px solid #835BD0;
-    background-color: #835BD0; 
+    background-color: #835BD0;
     font-size: large;
+    width: 50%;
+    height: 120%;
+    margin: auto;
+   
 }
-
+ 
+img{
+    display: inline-block;
+   
+}
+ 
 .container {
     border:3px solid #835BD0;
     background-color: #fff;
@@ -16,14 +25,14 @@
     width: 50%;
     height: 50%;
     align-items: center;
-    
+   
 }
-
-
+ 
+ 
 .Title{
     text-align:center;
 }
-
+ 
 /* .pools{
     border:3px solid #835BD0;
     background-color: #4B2E83;
@@ -40,10 +49,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 } */
-
+ 
 .grid-container{
     border:3px solid #835BD0;
-    background-color: #4B2E83;
+    background-color: #fff;
     margin: auto;
     padding: 10px;
     text-align: center;
