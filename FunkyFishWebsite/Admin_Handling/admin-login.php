@@ -23,6 +23,7 @@
 <form action="authenticate.php" method="post">
     Username: <input type="text" name="username" required>
     Password: <input type="password" name="password" required>
+ <!--  <a href="new-admin.php"> Create a new admin! </a> -->
     <input type="submit" value="Login">
 </form>
 
