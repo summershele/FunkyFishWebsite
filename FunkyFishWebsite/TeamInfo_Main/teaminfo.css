@@ -16,17 +16,45 @@ body {
 
 }
 
+h2{
+    text-align: center;
+}
+
 .column {
     flex-basis: 48%; /* Adjust the width of each column as needed */
     border: rgb(14, 10, 10);
 }
 
+.col{
+    padding: 40px 0;
+    border: 5px solid #4B2E83;
+    text-align: center;
+}
  .bio {
     
     color:rgb(14, 10, 10);
     text-align:center;
     border: 5px solid #4B2E83;
  }
+
+ .team_records {
+    width: 500px;
+    margin: 0 auto; 
+    width: 500px;
+    height: 400px;
+    border: 5px solid #4B2E83;
+    
+  }
+
+  #record{
+   /* object-fit: cover; */
+    display: block;
+    width: 500px;
+    height: 400px;
+    position: center;
+
+
+  }
 
 
 

@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT id, password FROM admins WHERE username=?";
+    $sql = "SELECT id, password FROM admin_users WHERE username=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $username);
 
