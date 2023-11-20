@@ -40,10 +40,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     
       <!--end header--> 
 
-    <h1>Welcome to the Admin Dashboard</h1>
-    <p>You are logged in!</p>
-    <a href="logout.php">Logout</a>
-
+    <form action="upload_schedule.php" method="post" enctype="multipart/form-data">
+        Select schedule to upload:
+        <input type="file" name="scheduleFile" id="scheduleFile">
+        <input type="submit" value="Upload Schedule" name="submit">
+    </form>
 </body>
     <!--Start Footer-->
     <footer>
