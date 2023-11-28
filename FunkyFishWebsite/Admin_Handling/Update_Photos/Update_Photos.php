@@ -6,6 +6,28 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: admin-login.php");
     exit;
 }
+// Function to get list of photos
+function getPhotoList() {
+    $photoDir = '../../Rotating_Photos';
+    return array_diff(scandir($photoDir), array('..', '.'));
+}
+
+// Check if a delete request was made
+if (isset($_GET['delete'])) {
+    $fileToDelete = '../../Rotating_Photos/' . $_GET['delete'];
+    if (file_exists($fileToDelete)) {
+        unlink($fileToDelete); // Delete the file
+        header("Location: Update_Photos.php"); // Redirect to avoid resubmission
+    }
+}
+
+// Check if a file is being uploaded
+if (isset($_FILES['photoUpload'])) {
+    $targetDir = '../FunkyFishWebsite/Rotating_Photos/';
+    $targetFile = $targetDir . basename($_FILES['photoUpload']['name']);
+    move_uploaded_file($_FILES['photoUpload']['tmp_name'], $targetFile);
+    header("Location: Update_Photos.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +62,37 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     
       <!--end header--> 
 
-    <h1>Welcome to the Admin Dashboard</h1>
-    <p>You are logged in!</p>
     <a href="logout.php">Logout</a>
+
+
+<!-- Display photos -->
+<div>
+    <h2>Photo Gallery</h2>
+    <?php
+    $photos = getPhotoList();
+    foreach ($photos as $photo) {
+        echo '<div>';
+        echo '<img src="../../Rotating_Photos/' . $photo . '" style="width:100px; height:auto;">';
+        echo '<a href="?delete=' . $photo . '">Remove</a>';
+        echo '</div>';
+    }
+    ?>
+</div>
+
+    <!-- Upload new photo -->
+<div>
+    <h2>Upload New Photo</h2>
+    <form action="Update_Photos.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="photoUpload" id="photoUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+</div>
+
+
+
+
+
 
 </body>
     <!--Start Footer-->
