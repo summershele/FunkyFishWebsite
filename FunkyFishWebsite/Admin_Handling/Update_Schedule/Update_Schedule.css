@@ -1,0 +1,33 @@
+.file-input {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.submit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* This is a green color, you can choose any color you like */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker shade for hover effect */
+}
+
+/* This is to style the label of the input for consistency */
+form {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+

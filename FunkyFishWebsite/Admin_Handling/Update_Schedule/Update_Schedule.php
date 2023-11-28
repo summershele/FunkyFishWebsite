@@ -16,6 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <title>Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="Update_Schedule.css">
 </head>
 <body>
 
@@ -37,18 +38,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               <li><a href="../Update_Parents/Update_Parents.php">Update Parents</a></li>
           </ul>
       </div>        
-    
+<div class="content">   
       <!--end header--> 
 
     <form action="upload_schedule.php" method="post" enctype="multipart/form-data">
         Select schedule to upload:
-        <input type="file" name="scheduleFile" id="scheduleFile">
+        <input type="file" name="scheduleFile" id="scheduleFile" class="file-input" class="submit-btn">
         <input type="submit" value="Upload Schedule" name="submit">
     </form>
+</div>
 </body>
     <!--Start Footer-->
     <footer>
-        <img src="../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
+        <img src="../../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
         <p><a href="Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
     </footer>
     <!--End Footer-->

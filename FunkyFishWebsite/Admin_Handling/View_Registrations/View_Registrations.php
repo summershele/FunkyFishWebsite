@@ -16,6 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <title>Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="View_Registrations.css">
 </head>
 <body>
 
@@ -60,7 +61,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       
       if ($result->num_rows > 0) {
           // Output data of each row as a table
-          echo "<table border='1'>";
+          echo "<table class='table-data'>";
           echo "<tr><th>ID</th><th>Parent Name</th><th>Parent Email</th><th>Parent Phone</th><th>Child Name</th></tr>";
           while($row = $result->fetch_assoc()) {
               echo "<tr><td>".$row["id"]."</td><td>".$row["parent_name"]."</td><td>".$row["parent_email"]."</td><td>".$row["parent_phone"]."</td><td>".$row["child_name"]."</td></tr>";
