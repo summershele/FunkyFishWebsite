@@ -5,10 +5,43 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
+  width: 25%;
+  height: 40%;
+  overflow: hidden;
+  }
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+#homepagelinks {
+ color: #4B2E83; 
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-style: inset;
+  border-width: 5px;  
+     
+}
+
+.usapic {
+  height: 15%;
+  width: 15%;
+}
+
+.col img {
+  display: inline-block;
+  height: 30%;
+  width: 20%;
+}
+
+.col{
+  padding: 40px ;
+  border: 5px solid #4B2E83;
+  text-align: center;
+  height: 250px;
+  width: 25%;
+  size: absolute;
 }
 
 /* Position the "next button" to the right */
