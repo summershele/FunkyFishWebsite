@@ -38,6 +38,7 @@ if (isset($_FILES['photoUpload'])) {
     <title>Admin Dashboard</title>
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="Update_Photos.css">
 </head>
 <body>
 
@@ -66,14 +67,14 @@ if (isset($_FILES['photoUpload'])) {
 
 
 <!-- Display photos -->
-<div>
-    <h2>Photo Gallery</h2>
+<h2>Photo Gallery</h2>
+<div class="gallery-grid">
     <?php
     $photos = getPhotoList();
     foreach ($photos as $photo) {
-        echo '<div>';
-        echo '<img src="../../Rotating_Photos/' . $photo . '" style="width:100px; height:auto;">';
-        echo '<a href="?delete=' . $photo . '">Remove</a>';
+        echo '<div class="gallery-item">';
+        echo '<img src="../../Rotating_Photos/' . htmlspecialchars($photo) . '" alt="Gallery Image">';
+        echo '<div class="remove-button"><a href="?delete=' . urlencode($photo) . '">Remove</a></div>';
         echo '</div>';
     }
     ?>
@@ -93,7 +94,7 @@ if (isset($_FILES['photoUpload'])) {
 </body>
     <!--Start Footer-->
     <footer>
-        <img src="../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
+        <img src="../../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
         <p><a href="Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
     </footer>
     <!--End Footer-->

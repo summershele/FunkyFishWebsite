@@ -1,0 +1,35 @@
+.remove-button a, .remove-button {
+    color: white;
+    background-color: #4B2E83; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #5B3E93; 
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* This will create a responsive grid */
+    grid-gap: 16px; /* Adjust the gap as needed */
+    padding: 16px;
+}
+
+.gallery-item {
+    position: relative; /* For positioning the remove button if needed */
+}
+
+.gallery-item img {
+    width: 100%; /* This will make the image responsive within the grid item */
+    height: auto;
+    display: block; /* Removes bottom space/margin of the image */
+}
