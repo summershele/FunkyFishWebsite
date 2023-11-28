@@ -1,0 +1,25 @@
+/* Add this to a new or existing CSS file */
+.table-data {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.table-data th, .table-data td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-data th {
+    background-color: #4B2E83;
+    color: white;
+}
+
+.table-data tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-data tr:hover {
+    background-color: #ddd;
+}
