@@ -23,7 +23,7 @@ if (isset($_GET['delete'])) {
 
 // Check if a file is being uploaded
 if (isset($_FILES['photoUpload'])) {
-    $targetDir = '../FunkyFishWebsite/Rotating_Photos/';
+    $targetDir = '../../Rotating_Photos/';
     $targetFile = $targetDir . basename($_FILES['photoUpload']['name']);
     move_uploaded_file($_FILES['photoUpload']['tmp_name'], $targetFile);
     header("Location: Update_Photos.php");
@@ -88,10 +88,6 @@ if (isset($_FILES['photoUpload'])) {
         <input type="submit" value="Upload Image" name="submit">
     </form>
 </div>
-
-
-
-
 
 
 </body>
