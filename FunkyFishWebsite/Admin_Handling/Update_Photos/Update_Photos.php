@@ -85,8 +85,13 @@ if (isset($_FILES['photoUpload'])) {
     <h2>Upload New Photo</h2>
     <form action="Update_Photos.php" method="post" enctype="multipart/form-data">
         Select image to upload:
-        <input type="file" name="photoUpload" id="photoUpload">
-        <input type="submit" value="Upload Image" name="submit">
+        <div class="remove-button">
+            <input type="file" name="photoUpload" id="photoUpload">
+        </div>
+        <div class="remove-button">
+            <input type="submit" value="Upload Image" name="submit">
+        </div>
+        </div>
     </form>
 </div>
 
