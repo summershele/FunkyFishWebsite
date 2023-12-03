@@ -1,11 +1,51 @@
 <?php
 session_start();
 
+$servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "sports_registration";
+      
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
+        $id = $_POST['id'];
+        $parent_name = $_POST['parent_name'];
+        $parent_email = $_POST['parent_email'];
+        $parent_phone = $_POST['parent_phone'];
+        $child_name = $_POST['child_name'];
+    
+        //Debugging
+        echo "Received values - ID: $id, Parent Name: $parent_name, Parent Email: $parent_email, Parent Phone: $parent_phone, Child Name: $child_name";
+    
+
+        // Prepare and bind
+        $stmt = $conn->prepare("UPDATE registrations SET parent_name=?, parent_email=?, parent_phone=?, child_name=? WHERE id=?");
+        $stmt->bind_param("ssssi", $parent_name, $parent_email, $parent_phone, $child_name, $id);
+    
+        // Execute the query
+        if ($stmt->execute()) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $stmt->error;
+        }
+    
+        // Close statement
+        $stmt->close();
+    }
+    
 // Check if the user is logged in, if not redirect to login page
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: admin-login.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -42,19 +82,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       <!--end header--> 
 
       <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "sports_registration";
-      
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-      
       // Query to fetch data
       $sql = "SELECT id, parent_name, parent_email, parent_phone, child_name FROM registrations";
       $result = $conn->query($sql);
@@ -69,11 +96,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           echo "</table>";
       } else {
           echo "0 results";
-      }
-      
-      // Close connection
-      $conn->close();
+      }  
       ?>
+
+      <!-- Update Form -->
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <input type="hidden" name="id" id="update_id">
+        ID: <input type="text" name="id" id="id"><br>
+        Parent Name: <input type="text" name="parent_name" id="update_parent_name"><br>
+        Parent Email: <input type="email" name="parent_email" id="update_parent_email"><br>
+        Parent Phone: <input type="text" name="parent_phone" id="update_parent_phone"><br>
+        Child Name: <input type="text" name="child_name" id="update_child_name"><br>
+        <input type="submit" name="update" value="Update Registration">
+    </form>
 
 </body>
     <!--Start Footer-->

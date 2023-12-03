@@ -14,6 +14,4 @@ if (isset($_COOKIE["username"])) {
     echo "No cookie found.";
 }
 
-// Rest of your PHP code
-// ...
 ?>
