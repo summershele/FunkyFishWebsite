@@ -8,8 +8,8 @@ body {
 .border {
   padding:5px;
   border:3px solid #835BD0;
-  /*background-color: whitesmoke;*/
-  background-image: linear-gradient(rgb(242, 209, 255), #835BD0);
+  background-color: whitesmoke;
+  
 }
 
 .article{
@@ -17,8 +17,7 @@ body {
 }
 body 
 {
-  background-color:rgb(242, 209, 255);
-  /*background-color: whitesmoke;*/
+  background-color: whitesmoke;
 }
 
 a1{
