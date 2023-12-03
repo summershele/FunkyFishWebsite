@@ -12,8 +12,8 @@ if ($conn->connect_error) {
 }
 
 // Replace with your desired admin username and password
-$newAdminUsername = "";
-$newAdminPassword = "";
+$newAdminUsername = "jgillis1";
+$newAdminPassword = "password";
 
 // Hash the password
 $hashedPassword = password_hash($newAdminPassword, PASSWORD_DEFAULT);
