@@ -1,14 +1,17 @@
 footer {
-    text-align: center;
-    padding: 3px;
-    background-color: #4B2E83;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
+  text-align: center;
+  padding: 3px;
+  background-color: #4B2E83;
+  position: absolute; /* Position the footer absolutely within the body */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  height: 200px;
   }
 
-body {
-padding-bottom: 200px; /* Adjust this value to match your footer's height */
-}
+  body {
+    position: relative;
+    min-height: 80vh;
+    padding-bottom: 200px;
+  }
