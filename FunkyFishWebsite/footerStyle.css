@@ -1,7 +1,14 @@
 footer {
-text-align: center;
-padding: 3px;
-background-color: #4B2E83;
-position: relative;
-color: white;
+    text-align: center;
+    padding: 3px;
+    background-color: #4B2E83;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+  }
+
+body {
+padding-bottom: 200px; /* Adjust this value to match your footer's height */
 }
