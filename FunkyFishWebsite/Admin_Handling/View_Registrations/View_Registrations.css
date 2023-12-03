@@ -1,4 +1,4 @@
-/* Add this to a new or existing CSS file */
+/* The CSS for the table*/
 .table-data {
     border-collapse: collapse;
     width: 100%;
@@ -22,4 +22,59 @@
 
 .table-data tr:hover {
     background-color: #ddd;
+}
+
+
+/*The CSS for the update form*/
+
+/* Update Form Styles */
+.update-form {
+    background-color: #4B2E83;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-form h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.update-form input[type="text"],
+.update-form input[type="email"],
+.update-form input[type="hidden"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.update-form input[type="submit"] {
+    width: 100%;
+    background-color: #4B2E83;
+    color: white;
+    padding: 14px 20px ;
+    margin: 8px 0 ;
+    border: none ;
+    border-radius: 4px ;
+    cursor: pointer ;
+}
+
+.update-form input[type="submit"]:hover {
+    background-color: #563d7c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .update-form {
+        width: 100%;
+        margin: 20px;
+    }
 }

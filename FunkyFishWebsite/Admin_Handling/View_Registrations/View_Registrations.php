@@ -100,14 +100,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       ?>
 
       <!-- Update Form -->
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <input type="hidden" name="id" id="update_id">
-        ID: <input type="text" name="id" id="id"><br>
-        Parent Name: <input type="text" name="parent_name" id="update_parent_name"><br>
-        Parent Email: <input type="email" name="parent_email" id="update_parent_email"><br>
-        Parent Phone: <input type="text" name="parent_phone" id="update_parent_phone"><br>
-        Child Name: <input type="text" name="child_name" id="update_child_name"><br>
-        <input type="submit" name="update" value="Update Registration">
+      
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="update-form">
+    <h2>Update Registration</h2>
+    Register ID: <input type="text" name="id" id="update_id"><br>
+    Parent Name: <input type="text" name="parent_name" id="update_parent_name"><br>
+    Parent Email: <input type="email" name="parent_email" id="update_parent_email"><br>
+    Parent Phone: <input type="text" name="parent_phone" id="update_parent_phone"><br>
+    Child Name: <input type="text" name="child_name" id="update_child_name"><br>
+    <input type="submit" name="update" value="Update Registration">
     </form>
 
 </body>
