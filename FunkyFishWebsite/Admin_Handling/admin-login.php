@@ -20,9 +20,6 @@
     </h1>
 </div>
 
-<a href="new-admin.php"> new admin! </a>
-
-
 <form action="authenticate.php" method="post">
     Username: <input type="text" name="username" required>
     Password: <input type="password" name="password" required>
