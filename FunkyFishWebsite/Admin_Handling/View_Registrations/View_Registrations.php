@@ -109,12 +109,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     Child Name: <input type="text" name="child_name" id="update_child_name"><br>
     <input type="submit" name="update" value="Update Registration">
     </form>
-
-</body>
-    <!--Start Footer-->
+<!--Start Footer-->
     <footer>
         <img src="../../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
         <p><a href="Admin_Handling/admin-login.php" title="Admin Login">©</a> 2023 Funky Fish LLC, All Rights Reserved</p>
     </footer>
     <!--End Footer-->
+</body>
+    
 </html>
