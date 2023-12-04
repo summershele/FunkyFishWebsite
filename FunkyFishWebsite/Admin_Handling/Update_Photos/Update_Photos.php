@@ -39,6 +39,7 @@ if (isset($_FILES['photoUpload'])) {
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
     <link rel="stylesheet" type="text/css" href="Update_Photos.css">
+    <link rel="icon" href="../../funkyFunLogo.jpg" type="image/ico">
 </head>
 <body>
 

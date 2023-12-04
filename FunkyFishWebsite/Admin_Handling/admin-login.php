@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../headerStyle.css">
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
     <link rel="stylesheet" type="text/css" href="Admin_CSS/admin-login.css">
+    <link rel="icon" href="../funkyFunLogo.jpg" type="image/ico">
 </head>
 <body>
 
