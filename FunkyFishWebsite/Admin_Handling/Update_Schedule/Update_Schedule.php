@@ -17,7 +17,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
     <link rel="stylesheet" type="text/css" href="Update_Schedule.css">
-</head>
+    <link rel="icon" href="../../funkyFunLogo.jpg" type="image/ico"></head>
 <body>
 
 <!--header -->

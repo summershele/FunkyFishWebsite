@@ -11,7 +11,6 @@ $pdfFolder = '../../TeamInfo_Main/records';
 $pdfs = glob($pdfFolder . '*.pdf');
 
 foreach ($pdfs as $pdf) {
-    echo '<embed src="' . $pdf . '" type="application/pdf" width="600" height="400">';
 }
 
 if ($_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {

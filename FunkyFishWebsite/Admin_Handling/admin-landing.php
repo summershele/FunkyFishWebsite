@@ -16,6 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../headerStyle.css">
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
+    <link rel="icon" href="../funkyFunLogo.jpg" type="image/ico">
     
     <title>Admin Dashboard</title>
 </head>
