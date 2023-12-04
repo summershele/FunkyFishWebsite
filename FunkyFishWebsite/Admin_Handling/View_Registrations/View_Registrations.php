@@ -88,9 +88,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       if ($result->num_rows > 0) {
           // Output data of each row as a table
           echo "<table class='table-data'>";
-          echo "<tr><th>ID</th><th>Parent Name</th><th>Parent Email</th><th>Parent Phone</th><th>Child Name</th></tr>";
+          echo "<tr><th>ID</th><th>Parent Name</th><th>Parent Email</th><th>Parent Phone</th><th>Child Name</th><th>Remove</th></tr>";
           while($row = $result->fetch_assoc()) {
-              echo "<tr><td>".$row["id"]."</td><td>".$row["parent_name"]."</td><td>".$row["parent_email"]."</td><td>".$row["parent_phone"]."</td><td>".$row["child_name"]."</td></tr>";
+              echo "<tr><td>".$row["id"]."</td><td>".$row["parent_name"]."</td><td>".$row["parent_email"]."</td><td>".$row["parent_phone"]."</td><td>".$row["child_name"]."</td><td><form method='post' action='Delete_Registrations.php'><input type='hidden' name='delete_id' value='".$row["id"]."'><input type='submit' name='delete' value='Delete'></form></td></tr>";
           }
           echo "</table>";
       } else {
