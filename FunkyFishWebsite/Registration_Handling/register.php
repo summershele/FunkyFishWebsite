@@ -1,4 +1,7 @@
 <?php
+
+
+
 // Database configuration
 $servername = "localhost";
 $username = "root";
@@ -16,13 +19,28 @@ if ($conn->connect_error) {
 // Flag to track registration status
 $registrationSuccessful = false;
 
+//sanitize the input
+function sanitizeInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+function removeSpecialChars($data) {
+    // Removes < and > characters
+    $data = str_replace("<", "", $data);
+    $data = str_replace(">", "", $data);
+    return $data;
+}
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect and sanitize input data
-    $parentName = $conn->real_escape_string($_POST['parentName']);
-    $parentEmail = $conn->real_escape_string($_POST['parentEmail']);
-    $parentPhone = $conn->real_escape_string($_POST['parentPhone']);
-    $childName = $conn->real_escape_string($_POST['childName']);
+    // Apply sanitization and remove special characters
+    $parentName = removeSpecialChars(sanitizeInput($_POST['parentName']));
+    $parentEmail = removeSpecialChars(sanitizeInput($_POST['parentEmail']));
+    $parentPhone = removeSpecialChars(sanitizeInput($_POST['parentPhone']));
+    $childName = removeSpecialChars(sanitizeInput($_POST['childName']));
 
     // SQL query to insert data
     $sql = "INSERT INTO registrations (parent_name, parent_email, parent_phone, child_name)
