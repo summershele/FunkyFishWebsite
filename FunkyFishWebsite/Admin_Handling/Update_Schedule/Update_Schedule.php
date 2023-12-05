@@ -22,30 +22,39 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <!--header -->
 <div class="header">
-            <h1>    
-              <a href="../admin-dashboard.php">
-                  <img src="../../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
-              Funky Fish Swim Club
-          </h1>
+    <h1>    
+            <a href="../admin-dashboard.php">
+                <img src="../../funkyfishlogo.jpg" alt="Fish" class="home-logo"></a> 
+            Funky Fish Swim Club
+    </h1>
               
-          <ul id="navbar" class="nav">
-              <li><a href="../Update_Photos/Update_Photos.php">Update Photos</a></li>
-              <li><a href="../Update_News/Update_News.php">Update News</a></li>
-              <li><a href="../Update_Schedule/Update_Schedule.php">Update Schedule</a></li>
-              <li><a href="../Update_Team_Info/Update_Team_Info.php">Update Team Info</a></li>
-              <li><a href="../Update_Pools/Update_Pools.php">Update Pools</a></li>
-              <li><a href="../View_Registrations/View_Registrations.php">View Registrations</a></li>
-          </ul>
-      </div>        
-<div class="content">   
+    <ul id="navbar" class="nav">
+        <li><a href="../Update_Photos/Update_Photos.php">Update Photos</a></li>
+        <li><a href="../Update_News/Update_News.php">Update News</a></li>
+        <li><a href="../Update_Schedule/Update_Schedule.php">Update Schedule</a></li>
+        <li><a href="../Update_Team_Info/Update_Team_Info.php">Update Team Info</a></li>
+        <li><a href="../Update_Pools/Update_Pools.php">Update Pools</a></li>
+        <li><a href="../View_Registrations/View_Registrations.php">View Registrations</a></li>
+    </ul>
+</div>        
       <!--end header--> 
-<a href="../logout.php">Logout</a>
+
+    <a href="../logout.php">Logout</a>
     <form action="upload_schedule.php" method="post" enctype="multipart/form-data">
         Select schedule to upload:
-        <input type="file" name="scheduleFile" id="scheduleFile" class="file-input" class="submit-btn">
+        <input type="file" name="scheduleFile" id="scheduleFile" class="submit-btn">
         <input type="submit" value="Upload Schedule" name="submit">
     </form>
-</div>
+
+    <div class="center-container">
+        <div class="schedule">   
+                <a href="../..//Schedule_Main/FunkyFishSchedule.pdf" download style="background-color: 4B2E83;"> Download the schedule here!</a>
+                <iframe src="../..//Schedule_Main/FunkyFishSchedule.pdf#toolbar=0" id="pdfIframe"></iframe>
+        </div>
+    </div>
+
+
+
 </body>
     <!--Start Footer-->
     <footer>
