@@ -22,6 +22,7 @@ if (isset($_SESSION['message'])) {
     <link rel="stylesheet" type="text/css" href="../Admin_CSS/admin-header.css">
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
     <link rel="icon" href="../../funkyFunLogo.jpg" type="image/ico">
+    <title>Admin:Update News</title>
 </head>
 <body>
 

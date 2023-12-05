@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
     <link rel="stylesheet" type="text/css" href="Admin_CSS/admin-login.css">
     <link rel="icon" href="../funkyFunLogo.jpg" type="image/ico">
+    <title>Admin Login</title>
 </head>
 <body>
 

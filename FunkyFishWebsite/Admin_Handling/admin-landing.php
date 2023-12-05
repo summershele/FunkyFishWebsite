@@ -17,6 +17,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="stylesheet" type="text/css" href="../headerStyle.css">
     <link rel="stylesheet" type="text/css" href="../footerStyle.css">
     <link rel="icon" href="../funkyFunLogo.jpg" type="image/ico">
+    <title>Admin Landing</title>
     
     <title>Admin Dashboard</title>
 </head>

@@ -58,6 +58,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <link rel="stylesheet" type="text/css" href="../../footerStyle.css">
     <link rel="stylesheet" type="text/css" href="View_Registrations.css">
     <link rel="icon" href="../../funkyFunLogo.jpg" type="image/ico"></head>
+    <title>Admin Update Registration</title>
 <body>
 
 <!--header -->
