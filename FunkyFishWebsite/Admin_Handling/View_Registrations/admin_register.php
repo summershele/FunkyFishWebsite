@@ -42,6 +42,6 @@ $conn->close();
 // Redirect after successful registration
 if ($registrationSuccessful) {
     echo "<script>alert('Registration successful!');</script>";
-    header("Refresh:3; url=../index.html");
+    header("Refresh:3; url=View_registrations.php");
 }
 ?>

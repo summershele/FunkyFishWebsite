@@ -110,7 +110,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <input type="submit" name="update" value="Update Registration">
         </form>
 
-        <form action="../../Registration_Handling/register.php" method="post" class="update-form">
+        <form action="admin_register.php" method="post" class="update-form">
         <h2>Add Registration</h1>
             <label for="parentName">Parent Name:</label>
             <input type="text" id="parentName" name="parentName" required><br><br>
