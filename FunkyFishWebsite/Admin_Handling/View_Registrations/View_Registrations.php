@@ -89,9 +89,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       if ($result->num_rows > 0) {
           // Output data of each row as a table
           echo "<table class='table-data'>";
-          echo "<tr><th>ID</th><th>Parent Name</th><th>Parent Email</th><th>Parent Phone</th><th>Child Name</th></tr>";
+          echo "<tr><th>ID</th><th>Parent Name</th><th>Parent Email</th><th>Parent Phone</th><th>Child Name</th><th>Remove</th></tr>";
           while($row = $result->fetch_assoc()) {
-              echo "<tr><td>".$row["id"]."</td><td>".$row["parent_name"]."</td><td>".$row["parent_email"]."</td><td>".$row["parent_phone"]."</td><td>".$row["child_name"]."</td></tr>";
+              echo "<tr><td>".$row["id"]."</td><td>".$row["parent_name"]."</td><td>".$row["parent_email"]."</td><td>".$row["parent_phone"]."</td><td>".$row["child_name"]."</td><td><form method='post' action='Delete_Registrations.php'><input type='hidden' name='delete_id' value='".$row["id"]."'><input type='submit' name='delete' value='Delete'></form></td></tr>";
           }
           echo "</table>";
       } else {
@@ -100,16 +100,34 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       ?>
 
       <!-- Update Form -->
-      
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="update-form">
-    <h2>Update Registration</h2>
-    Register ID: <input type="text" name="id" id="update_id"><br>
-    Parent Name: <input type="text" name="parent_name" id="update_parent_name"><br>
-    Parent Email: <input type="email" name="parent_email" id="update_parent_email"><br>
-    Parent Phone: <input type="text" name="parent_phone" id="update_parent_phone"><br>
-    Child Name: <input type="text" name="child_name" id="update_child_name"><br>
-    <input type="submit" name="update" value="Update Registration">
-    </form>
+    <div class = "forms-container"> 
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="update-form">
+        <h2>Update Registration</h2>
+            Register ID: <input type="text" name="id" id="update_id"><br>
+            Parent Name: <input type="text" name="parent_name" id="update_parent_name"><br>
+            Parent Email: <input type="email" name="parent_email" id="update_parent_email"><br>
+            Parent Phone: <input type="text" name="parent_phone" id="update_parent_phone"><br>
+            Child Name: <input type="text" name="child_name" id="update_child_name"><br>
+            <input type="submit" name="update" value="Update Registration">
+        </form>
+
+        <form action="admin_register.php" method="post" class="update-form">
+        <h2>Add Registration</h1>
+            <label for="parentName">Parent Name:</label>
+            <input type="text" id="parentName" name="parentName" required><br><br>
+
+            <label for="parentEmail">Parent Email:</label>
+            <input type="email" id="parentEmail" name="parentEmail" required><br><br>
+
+            <label for="parentPhone">Parent Phone:</label>
+            <input type="tel" id="parentPhone" name="parentPhone" required><br><br>
+
+            <label for="childName">Child Name:</label>
+            <input type="text" id="childName" name="childName" required><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
 <!--Start Footer-->
     <footer>
         <img src="../../funkyFunLogo.jpg" alt="Funky Fun Logo!" width="150px">
